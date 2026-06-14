@@ -1,0 +1,159 @@
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: inline-block;
+  padding: 16px 0;
+
+  font-family: "Raleway", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #2e2f42;
+}
+
+.logo span {
+  color: #4d5ae5;
+}
+
+.navigation,
+.address {
+  display: none;
+}
+
+.address {
+  font-style: normal;
+}
+
+.menu-open-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.menu-open-btn svg {
+  fill: #2f2f37;
+}
+
+/* ================= TABLET ================= */
+
+@media screen and (min-width: 768px) {
+  .menu-open-btn {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    align-items: center;
+
+    margin-left: 120px;
+  }
+
+  .nav-list {
+    display: flex;
+    gap: 40px;
+  }
+
+  .header-link {
+    position: relative;
+
+    display: block;
+
+    padding: 24px 0;
+
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+
+    color: #2e2f42;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header-link:hover,
+  .header-link:focus {
+    color: #404bbf;
+  }
+
+  .header-link.current {
+    color: #404bbf;
+  }
+
+  .header-link.current::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: -1px;
+
+    width: 100%;
+    height: 4px;
+
+    border-radius: 2px;
+
+    background-color: #404bbf;
+  }
+
+  .address {
+    display: block;
+
+    margin-left: auto;
+  }
+
+  .address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .header-contact {
+    font-size: 12px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+
+    color: #434455;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .header-contact:hover,
+  .header-contact:focus {
+    color: #404bbf;
+  }
+}
+
+/* ================= DESKTOP ================= */
+
+@media screen and (min-width: 1158px) {
+  .navigation {
+    margin-left: 76px;
+  }
+
+  .address-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .header-contact {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
+}
