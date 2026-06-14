@@ -7,8 +7,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
   gap: 72px;
+}
+
+.footer-info,
+.footer-social,
+.footer-subscribe {
+  text-align: center;
 }
 
 .footer-info {
@@ -29,6 +34,7 @@
   color: #f4f4fd;
   line-height: 1.5;
   letter-spacing: 0.02em;
+  text-align: left;
 }
 
 .footer-social-text,
@@ -53,12 +59,12 @@
 }
 
 .footer-social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   width: 100%;
   height: 100%;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   border-radius: 50%;
 
@@ -91,7 +97,7 @@
   border: 1px solid #ffffff;
   border-radius: 4px;
 
-  background: transparent;
+  background-color: transparent;
 
   color: #ffffff;
 
@@ -105,15 +111,15 @@
 }
 
 .footer-subscribe-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+
   min-width: 165px;
   height: 40px;
 
   margin: 0 auto;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 16px;
 
   border: none;
   border-radius: 4px;
@@ -122,12 +128,14 @@
 
   color: #ffffff;
 
-  font-weight: 500;
   font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
 
   cursor: pointer;
 
-  transition: background-color 250ms;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-subscribe-btn:hover,
@@ -139,7 +147,7 @@
   fill: #ffffff;
 }
 
-/* ---------- TABLET ---------- */
+/* ================= TABLET ================= */
 
 @media screen and (min-width: 768px) {
   .footer-container {
@@ -149,9 +157,15 @@
     align-items: flex-start;
     justify-content: flex-start;
 
-    text-align: left;
-
     max-width: 584px;
+
+    gap: 72px 24px;
+  }
+
+  .footer-info,
+  .footer-social,
+  .footer-subscribe {
+    text-align: left;
   }
 
   .footer-subscribe-form {
@@ -168,7 +182,7 @@
   }
 }
 
-/* ---------- DESKTOP ---------- */
+/* ================= DESKTOP ================= */
 
 @media screen and (min-width: 1158px) {
   .footer {
@@ -187,7 +201,7 @@
     margin-right: 120px;
   }
 
-  .footer-social {
-    margin-right: 80px;
+  .footer-subscribe {
+    margin-left: auto;
   }
 }
