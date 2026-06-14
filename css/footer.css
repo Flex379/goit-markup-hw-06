@@ -50,6 +50,7 @@
 
 .footer-social-list {
   display: flex;
+  justify-content: center;
   gap: 16px;
 }
 
@@ -168,6 +169,10 @@
     text-align: left;
   }
 
+  .footer-social-list {
+    justify-content: flex-start;
+  }
+
   .footer-subscribe-form {
     flex-direction: row;
     gap: 24px;
@@ -191,9 +196,7 @@
 
   .footer-container {
     max-width: 1158px;
-
     flex-wrap: nowrap;
-
     gap: 0;
   }
 
